@@ -193,18 +193,6 @@ src="https://streak-stats.demolab.com?user=Nhazz07&theme=tokyonight&hide_border=
 width="500"
 />
 
-</div>
-
-📈 Contribution Graph
-
-<div align="center">
-
-<img
-src="https://github-readme-activity-graph.vercel.app/graph?username=Nhazz07&theme=tokyo-night&hide_border=true"
-width="95%"
-/>
-
-</div>
 
 🎯 Learning Roadmap
 
