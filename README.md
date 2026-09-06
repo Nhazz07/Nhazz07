@@ -1,16 +1,26 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Nhazz07/Nhazz07** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 👋 Hey, I'm Nhazz
 
-Here are some ideas to get you started:
+### 💻 Student • Backend Developer • Builder
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I enjoy turning ideas into working software, learning how systems work,
+and building projects that challenge me.
+
+[![GitHub](https://img.shields.io/badge/GitHub-Nhazz07-181717?style=for-the-badge&logo=github)](https://github.com/Nhazz07)
+
+</div>
+
+---
+
+## 🧑‍💻 About Me
+
+```text
+🎓 Student
+💻 Learning Backend Development
+☕ Java & Spring Boot
+🐳 Docker
+⚙️ C++
+🌐 JavaScript / TypeScript
+🧠 Problem Solving
+🚀 Always building something
