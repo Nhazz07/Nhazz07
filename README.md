@@ -2,7 +2,7 @@
 
 👋 Hey, I'm Nhazz
 
-💻 Student • Backend Developer • Builder
+ Student • Backend Developer • Builder
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&center=true&vCenter=true&width=500&lines=Learning+Backend+Development;Building+with+Java+%26+Spring+Boot;Exploring+Docker+%26+DevOps;Turning+ideas+into+projects" />
 
@@ -21,36 +21,36 @@ software works and turning ideas into real projects.
 I'm currently focusing on backend development, especially with
 Java and Spring Boot.
 
-🎓 Student
-💻 Backend Development
-☕ Java
-🌱 Spring Boot
-🔐 Spring Security
-🐳 Docker
-⚙️ C++
-🌐 JavaScript / TypeScript
-🐧 Linux
-🧠 Problem Solving
+ Student
+ Backend Development
+ Java
+ Spring Boot
+ Spring Security
+ Docker
+ C++
+ JavaScript / TypeScript
+ Linux
+ Problem Solving
 
-🚀 What I'm Currently Doing
+ What I'm Currently Doing
 
-🔨 Building a Spring Boot E-Commerce Backend
+ Building a Spring Boot E-Commerce Backend
 
-🔐 Learning Spring Security & JWT Authentication
+ Learning Spring Security & JWT Authentication
 
-🗄️ Improving my knowledge of JPA & Database Design
+ Improving my knowledge of JPA & Database Design
 
-🐳 Learning Docker & containerization
+ Learning Docker & containerization
 
-🌐 Building frontend projects with JavaScript / TypeScript
+ Building frontend projects with JavaScript / TypeScript
 
-🧠 Practicing problem solving with C++
+ Practicing problem solving with C++
 
-📚 Creating documentation while learning Spring Boot
+ Creating documentation while learning Spring Boot
 
-🛠️ Tech Stack
+ Tech Stack
 
-💻 Languages
+ Languages
 
 <p>
   <img src="https://skillicons.dev/icons?i=java,cpp,js,ts,html,css" />
@@ -74,9 +74,9 @@ Java and Spring Boot.
   <img src="https://skillicons.dev/icons?i=git,github,linux,idea,vscode" />
 </p>
 
-📌 Featured Projects
+ Featured Projects
 
-🛒 E-Commerce Backend
+ E-Commerce Backend
 
 Java • Spring Boot • Spring Security • JWT • JPA • Docker
 
@@ -85,60 +85,60 @@ system.
 
 Features
 
-🔐 Authentication & Authorization
+ Authentication & Authorization
 
-👤 Customer & Admin roles
+ Customer & Admin roles
 
-🔑 JWT Security
+ JWT Security
 
-📦 Product management
+ Product management
 
-🛒 Cart management
+ Cart management
 
-📋 Order management
+ Order management
 
-🎟️ Coupon system
+ Coupon system
 
-🗄️ Database relationships
+ Database relationships
 
-🌐 REST APIs
+ REST APIs
 
-🐳 Docker integration
+ Docker integration
 
-🔗 Repository:
+ Repository:
 https://github.com/Nhazz07/ecommerce-backend
 
-🏪 Anteiku Shop Dashboard
+ Anteiku Shop Dashboard
 
 TypeScript
 
 A dashboard project focused on building a modern web interface and
 working with TypeScript.
 
-🔗 Repository:
+ Repository:
 https://github.com/Nhazz07/AnteikuShopDashboard
 
-🎓 Student Management System
+ Student Management System
 
 JavaScript
 
 A frontend project for managing student information and building
 interactive web functionality.
 
-🔗 Repository:
+ Repository:
 https://github.com/Nhazz07/StudentManagementSystemFrontend
 
-🧪 C++ Final Project
+ C++ Final Project
 
 C++
 
 A project built while developing my understanding of object-oriented
 programming, classes, objects, and software structure.
 
-🔗 Repository:
+ Repository:
 https://github.com/Nhazz07/Cpp_Final_Project
 
-📚 Spring Boot Documentation
+ Spring Boot Documentation
 
 A personal collection of notes and documentation created while
 learning Spring Boot.
@@ -169,7 +169,7 @@ JPA
 
 Database Relationships
 
-🔗 Repository:
+ Repository:
 https://github.com/Nhazz07/SpringBootDocumentary
 
 📊 GitHub Statistics
@@ -194,96 +194,64 @@ width="500"
 />
 
 
-🎯 Learning Roadmap
-
-                         MY JOURNEY
-
-              Programming Fundamentals
-                         │
-                         ▼
-                       Java
-                         │
-                         ▼
-                    Spring Boot
-                         │
-                         ▼
-                    REST APIs
-                         │
-                         ▼
-                JPA / Hibernate
-                         │
-                         ▼
-              Spring Security + JWT
-                         │
-                         ▼
-                 Database Design
-                         │
-                         ▼
-                       Docker
-                         │
-                         ▼
-                    Deployment
-                         │
-                         ▼
-                    DevOps 🚀
 
 🧠 What I Want to Improve
 
-☕ Java
+ Java
 ████████████████░░░░ 80%
 
-🌱 Spring Boot
+ Spring Boot
 ██████████████░░░░░░ 70%
 
-🔐 Spring Security
+ Spring Security
 ██████████░░░░░░░░░░ 50%
 
-🗄️ Database
+ Database
 ████████████░░░░░░░░ 60%
 
-🐳 Docker
+ Docker
 ████████░░░░░░░░░░░░ 40%
 
-⚙️ C++
+ C++
 ████████████░░░░░░░░ 60%
 
-🌐 JavaScript
+ JavaScript
 ████████████░░░░░░░░ 60%
 
-🔷 TypeScript
+ TypeScript
 ████████░░░░░░░░░░░░ 40%
 
-🎮 Beyond Coding
+ Beyond Coding
 
 When I'm not coding, I'm probably doing one of these:
 
-🎬 Watching movies
-🍿 Watching anime
-🎮 Gaming
-📷 Photography
-🎥 Video editing
-🏎️ Sim racing
-📚 Learning something new
+ Watching movies
+ Watching anime
+ Gaming
+ Photography
+ Video editing
+ Sim racing
+ Learning something new
 
-🏆 My Goals
+ My Goals
 
-🚀 Become a strong backend developer
+ Become a strong backend developer
 
-🏗️ Build production-level applications
+ Build production-level applications
 
-🔐 Understand application security deeply
+ Understand application security deeply
 
-🐳 Become comfortable with Docker
+ Become comfortable with Docker
 
-☁️ Learn deployment and DevOps
+ Learn deployment and DevOps
 
-🧠 Improve problem-solving skills
+ Improve problem-solving skills
 
-💼 Build a strong portfolio
+ Build a strong portfolio
 
-📚 Keep learning and experimenting
+ Keep learning and experimenting
 
-🐍 Contribution Snake
+ Contribution Snake
 
 <div align="center">
 
@@ -295,8 +263,8 @@ When I'm not coding, I'm probably doing one of these:
 
 💻 Code. Learn. Build. Repeat.
 
-Thanks for visiting my profile! 👋
+Thanks for visiting my profile! 
 
-⭐ Feel free to explore my repositories.
+ Feel free to explore my repositories.
 
 </div>
