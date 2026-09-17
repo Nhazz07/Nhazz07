@@ -1,6 +1,6 @@
 <div align="center">
 
-👋 Hey, I'm Nhazz
+ Hey, I'm Nhazz
 
  Student • Backend Developer • Builder
 
@@ -13,7 +13,7 @@
 
 </div>
 
-🧑‍💻 About Me
+ About Me
 
 Hey! I'm Nhazz, a student and developer who enjoys learning how
 software works and turning ideas into real projects.
@@ -183,7 +183,7 @@ width="500"
 
 
 
-🧠 What I Want to Improve
+ What I Want to Improve
 
  Java
 ████████████████░░░░ 80%
