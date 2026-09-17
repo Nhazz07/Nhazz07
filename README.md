@@ -172,18 +172,6 @@ Database Relationships
  Repository:
 https://github.com/Nhazz07/SpringBootDocumentary
 
-📊 GitHub Statistics
-
-<div align="center">
-
-<img height="170"
-src="https://github-readme-stats.vercel.app/api?username=Nhazz07&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-
-<img height="170"
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nhazz07&layout=compact&theme=tokyonight&hide_border=true" />
-
-</div>
-
 🔥 Contribution Streak
 
 <div align="center">
