@@ -181,36 +181,6 @@ src="https://streak-stats.demolab.com?user=Nhazz07&theme=tokyonight&hide_border=
 width="500"
 />
 
-
-
- What I Want to Improve
-
- Java
-████████████████░░░░ 80%
-
- Spring Boot
-██████████████░░░░░░ 70%
-
- Spring Security
-██████████░░░░░░░░░░ 50%
-
- Database
-████████████░░░░░░░░ 60%
-
- Docker
-████████░░░░░░░░░░░░ 40%
-
- C++
-████████████░░░░░░░░ 60%
-
- JavaScript
-████████████░░░░░░░░ 60%
-
- TypeScript
-████████░░░░░░░░░░░░ 40%
-
- Beyond Coding
-
 When I'm not coding, I'm probably doing one of these:
 
  Watching movies
@@ -243,13 +213,11 @@ When I'm not coding, I'm probably doing one of these:
 
 <div align="center">
 
-
-
 </div>
 
 <div align="center">
 
-💻 Code. Learn. Build. Repeat.
+ Code. Learn. Build. Repeat.
 
 Thanks for visiting my profile! 
 
