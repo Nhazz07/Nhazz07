@@ -56,19 +56,19 @@ Java and Spring Boot.
   <img src="https://skillicons.dev/icons?i=java,cpp,js,ts,html,css" />
 </p>
 
-⚙️ Backend
+ Backend
 
 <p>
   <img src="https://skillicons.dev/icons?i=spring,maven" />
 </p>
 
-🗄️ Database & Infrastructure
+ Database & Infrastructure
 
 <p>
   <img src="https://skillicons.dev/icons?i=mysql,postgres,docker" />
 </p>
 
-🧰 Tools
+ Tools
 
 <p>
   <img src="https://skillicons.dev/icons?i=git,github,linux,idea,vscode" />
@@ -172,7 +172,7 @@ Database Relationships
  Repository:
 https://github.com/Nhazz07/SpringBootDocumentary
 
-🔥 Contribution Streak
+ Contribution Streak
 
 <div align="center">
 
