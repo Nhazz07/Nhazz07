@@ -177,8 +177,9 @@ https://github.com/Nhazz07/SpringBootDocumentary
 <div align="center">
 
 <img
-src="https://streak-stats.demolab.com?user=Nhazz07&theme=tokyonight&hide_border=true&timezone=Asia/Phnom_Penh"
+src="./profile/streak.svg"
 width="500"
+alt="GitHub Contribution Streak"
 />
 
 </div>
