@@ -3,6 +3,11 @@ name: Update GitHub Streak
 on:
   schedule:
     - cron: "0 3 * * *"
+
+  push:
+    paths:
+      - ".github/workflows/streak.yml"
+
   workflow_dispatch:
 
 permissions:
@@ -13,12 +18,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
 
       - name: Generate streak stats
         uses: zients/github-readme-streak-stats@v2
         with:
-          options: user=Nhazz07&theme=tokyonight&disable_animations=true
+          options: user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&disable_animations=true
           path: profile/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
