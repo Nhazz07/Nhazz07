@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  streak:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
       - name: Generate streak stats
         uses: zients/github-readme-streak-stats@v2
         with:
-          options: user=Nhazz07&theme=tokyonight&hide_border=true&disable_animations=true
+          options: user=Nhazz07&theme=tokyonight&disable_animations=true
           path: profile/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
