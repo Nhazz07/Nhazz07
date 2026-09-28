@@ -177,9 +177,11 @@ https://github.com/Nhazz07/SpringBootDocumentary
 <div align="center">
 
 <img
-src="https://streak-stats.demolab.com?user=Nhazz07&theme=tokyonight&hide_border=true"
+src="https://streak-stats.demolab.com?user=Nhazz07&theme=tokyonight&hide_border=true&timezone=Asia/Phnom_Penh"
 width="500"
 />
+
+</div>
 
 When I'm not coding, I'm probably doing one of these:
 
