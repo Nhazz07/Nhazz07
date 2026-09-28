@@ -175,12 +175,7 @@ https://github.com/Nhazz07/SpringBootDocumentary
  Contribution Streak
 
 <div align="center">
-
-<img
-  src="./profile/streak.svg"
-  width="500"
-  alt="GitHub Contribution Streak"
-/>
+<img src="./profile/streak.svg" alt="GitHub Streak" />
 
 </div>
 
