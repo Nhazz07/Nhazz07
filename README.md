@@ -173,15 +173,14 @@ Database Relationships
 https://github.com/Nhazz07/SpringBootDocumentary
 
  Contribution Streak
+
 <div align="center">
 
-<a href="https://git.io/streak-stats">
-  <img
-    src="./profile/streak.svg"
-    width="500"
-    alt="GitHub Contribution Streak"
-  />
-</a>
+<img
+  src="./profile/streak.svg"
+  width="500"
+  alt="GitHub Contribution Streak"
+/>
 
 </div>
 
