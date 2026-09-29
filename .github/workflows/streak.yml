@@ -12,30 +12,57 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3. Install Python dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
-      # 4. Pull latest changes
       - name: Pull latest changes
         run: |
           git pull --rebase origin main
 
-      # 5. Generate streak SVG
+      # TEST TOKEN FIRST
+      - name: Test GitHub token
+        env:
+          GH_PAT: ${{ secrets.GITHUB_STREAK_TOKEN }}
+        run: |
+          if [ -z "$GH_PAT" ]; then
+            echo "❌ GITHUB_STREAK_TOKEN is empty or missing."
+            exit 1
+          fi
+
+          echo "✅ GITHUB_STREAK_TOKEN exists."
+
+          RESPONSE=$(curl \
+            -s \
+            -o /tmp/github-response.json \
+            -w "%{http_code}" \
+            -H "Authorization: Bearer $GH_PAT" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user)
+
+          echo "GitHub API status: $RESPONSE"
+
+          if [ "$RESPONSE" != "200" ]; then
+            echo "❌ Token authentication failed."
+            cat /tmp/github-response.json
+            exit 1
+          fi
+
+          echo "✅ Token authentication works."
+
+      # ONLY RUN IF TOKEN TEST PASSES
       - name: Generate streak SVG
         env:
           GH_PAT: ${{ secrets.GITHUB_STREAK_TOKEN }}
@@ -43,7 +70,6 @@ jobs:
         run: |
           python generate_streak.py
 
-      # 6. Commit and push the generated SVG
       - name: Commit updated streak
         run: |
           git config user.name "github-actions[bot]"
