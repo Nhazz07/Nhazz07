@@ -1,41 +1,59 @@
 name: Update GitHub Streak
 
 on:
-  schedule:
-    - cron: "0 3 * * *"
+  push:
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  update-streak:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Python
+      # 2. Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
 
+      # 3. Install Python dependencies
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
+      # 4. Pull latest changes
+      - name: Pull latest changes
+        run: |
+          git pull --rebase origin main
+
+      # 5. Generate streak SVG
       - name: Generate streak SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.STREAK_TOKEN }}
-          GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: python generate_streak.py
+          GH_PAT: ${{ secrets.GITHUB_STREAK_TOKEN }}
+          GITHUB_USERNAME: Nhazz07
+        run: |
+          python generate_streak.py
 
-      - name: Commit streak
+      # 6. Commit and push the generated SVG
+      - name: Commit updated streak
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add profile/streak.svg
 
-          git commit -m "Update GitHub streak" || exit 0
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update GitHub contribution streak"
+            git push origin main
+          fi
