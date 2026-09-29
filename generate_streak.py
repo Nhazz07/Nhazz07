@@ -4,14 +4,25 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-TOKEN = os.environ["GITHUB_TOKEN"]
+
+# ============================================================
+# GitHub authentication
+# ============================================================
+
+TOKEN = os.environ["GH_PAT"]
 USERNAME = os.environ["GITHUB_USERNAME"]
+
+
+# ============================================================
+# GitHub GraphQL query
+# ============================================================
 
 QUERY = """
 query($userName: String!) {
   user(login: $userName) {
     contributionsCollection {
       contributionCalendar {
+        totalContributions
         weeks {
           contributionDays {
             date
@@ -24,16 +35,18 @@ query($userName: String!) {
 }
 """
 
-# -----------------------------
+
+# ============================================================
 # GitHub GraphQL request
-# -----------------------------
+# ============================================================
+
 response = requests.post(
     "https://api.github.com/graphql",
     json={
         "query": QUERY,
         "variables": {
             "userName": USERNAME
-        }
+        },
     },
     headers={
         "Authorization": f"Bearer {TOKEN}",
@@ -46,66 +59,105 @@ response.raise_for_status()
 
 data = response.json()
 
+
+# ============================================================
+# Check GraphQL errors
+# ============================================================
+
 if "errors" in data:
-    raise RuntimeError(data["errors"])
+    raise RuntimeError(
+        f"GitHub GraphQL error: {data['errors']}"
+    )
+
 
 user = data.get("data", {}).get("user")
 
 if user is None:
-    raise RuntimeError("GitHub user was not found.")
+    raise RuntimeError(
+        f"GitHub user '{USERNAME}' was not found."
+    )
 
-weeks = user["contributionsCollection"]["contributionCalendar"]["weeks"]
+
+calendar = user["contributionsCollection"]["contributionCalendar"]
+
+weeks = calendar["weeks"]
+
+total_contributions = calendar["totalContributions"]
 
 
-# -----------------------------
+# ============================================================
 # Build contribution days
-# -----------------------------
+# ============================================================
+
 days = []
 
 for week in weeks:
+
     for day in week["contributionDays"]:
+
         days.append(
             {
                 "date": datetime.strptime(
                     day["date"],
                     "%Y-%m-%d"
                 ).date(),
+
                 "count": day["contributionCount"],
             }
         )
 
-days.sort(key=lambda x: x["date"])
+
+days.sort(
+    key=lambda x: x["date"]
+)
 
 
-# -----------------------------
+# ============================================================
 # Current date
 # Cambodia timezone
-# -----------------------------
+# ============================================================
+
 today = datetime.now(
     ZoneInfo("Asia/Phnom_Penh")
 ).date()
 
+
+print("=" * 50)
+print("GitHub Contribution Streak")
+print("=" * 50)
+
 print(f"User: {USERNAME}")
 print(f"Today: {today}")
+print(f"Total contributions: {total_contributions}")
+
 print()
+
+
+# ============================================================
+# Debug recent contribution days
+# ============================================================
 
 print("Recent contribution days:")
 
-debug_start = today - timedelta(days=7)
+debug_start = today - timedelta(days=14)
 
 for day in days:
+
     if debug_start <= day["date"] <= today:
+
         print(
             f"{day['date']} -> "
             f"{day['count']} contributions"
         )
 
+
 print()
 
 
-# -----------------------------
+# ============================================================
 # Contribution dates
-# -----------------------------
+# ============================================================
+
 contribution_dates = {
     day["date"]
     for day in days
@@ -113,25 +165,18 @@ contribution_dates = {
 }
 
 
-# -----------------------------
+# ============================================================
 # Current streak
-# -----------------------------
-#
-# If today has a contribution:
-#     start counting from today.
-#
-# If today has NO contribution yet:
-#     start counting from yesterday.
-#
-# This prevents the streak from showing
-# 0 during the current day.
-# -----------------------------
+# ============================================================
 
 if today in contribution_dates:
 
     streak_end = today
 
-elif (today - timedelta(days=1)) in contribution_dates:
+elif (
+    today - timedelta(days=1)
+    in contribution_dates
+):
 
     streak_end = today - timedelta(days=1)
 
@@ -154,9 +199,10 @@ if streak_end is not None:
         check_date -= timedelta(days=1)
 
 
-# -----------------------------
+# ============================================================
 # Longest streak
-# -----------------------------
+# ============================================================
+
 longest_streak = 0
 
 running = 0
@@ -185,14 +231,17 @@ for date in sorted(contribution_dates):
     previous = date
 
 
-# -----------------------------
+# ============================================================
 # Current streak dates
-# -----------------------------
+# ============================================================
+
 if current_streak > 0:
 
     streak_start = (
         streak_end
-        - timedelta(days=current_streak - 1)
+        - timedelta(
+            days=current_streak - 1
+        )
     )
 
     date_text = (
@@ -209,9 +258,34 @@ else:
     date_text = "No current streak"
 
 
-# -----------------------------
+# ============================================================
+# Print final result
+# ============================================================
+
+print("=" * 50)
+
+print(
+    f"Current streak: "
+    f"{current_streak}"
+)
+
+print(
+    f"Longest streak: "
+    f"{longest_streak}"
+)
+
+print(
+    f"Streak period: "
+    f"{date_text}"
+)
+
+print("=" * 50)
+
+
+# ============================================================
 # Create SVG
-# -----------------------------
+# ============================================================
+
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 width="700"
 height="220"
@@ -270,9 +344,10 @@ viewBox="0 0 700 220">
 """
 
 
-# -----------------------------
+# ============================================================
 # Write SVG
-# -----------------------------
+# ============================================================
+
 Path("profile").mkdir(
     exist_ok=True
 )
@@ -281,26 +356,9 @@ Path(
     "profile/streak.svg"
 ).write_text(
     svg,
-    encoding="utf-8",
+    encoding="utf-8"
 )
 
 
-# -----------------------------
-# Debug output
-# -----------------------------
 print()
-
-print(
-    f"Current streak: "
-    f"{current_streak}"
-)
-
-print(
-    f"Longest streak: "
-    f"{longest_streak}"
-)
-
-print(
-    f"Streak period: "
-    f"{date_text}"
-)
+print("SVG successfully generated.")
