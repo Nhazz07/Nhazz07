@@ -32,17 +32,16 @@ jobs:
         run: |
           git pull --rebase origin main
 
-      # TEST TOKEN FIRST
       - name: Test GitHub token
         env:
-          GH_PAT: ${{ secrets.GITHUB_STREAK_TOKEN }}
+          GH_PAT: ${{ secrets.STREAK_TOKEN }}
         run: |
           if [ -z "$GH_PAT" ]; then
-            echo "❌ GITHUB_STREAK_TOKEN is empty or missing."
+            echo "❌ STREAK_TOKEN is empty or missing."
             exit 1
           fi
 
-          echo "✅ GITHUB_STREAK_TOKEN exists."
+          echo "✅ STREAK_TOKEN exists."
 
           RESPONSE=$(curl \
             -s \
@@ -62,10 +61,9 @@ jobs:
 
           echo "✅ Token authentication works."
 
-      # ONLY RUN IF TOKEN TEST PASSES
       - name: Generate streak SVG
         env:
-          GH_PAT: ${{ secrets.GITHUB_STREAK_TOKEN }}
+          GH_PAT: ${{ secrets.STREAK_TOKEN }}
           GITHUB_USERNAME: Nhazz07
         run: |
           python generate_streak.py
