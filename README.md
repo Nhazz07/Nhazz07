@@ -182,12 +182,6 @@ When I'm not coding, I'm probably doing one of these:
 - Build a strong portfolio
 - Keep learning and experimenting
 
----
-
-##  Contribution Snake
-
-Making my GitHub account active every day for 25 years. 
-
 <div align="center">
 
 </div>
