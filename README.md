@@ -157,22 +157,6 @@ learning Spring Boot.
 **Repository:**  
 https://github.com/Nhazz07/SpringBootDocumentary
 
----
-
-##  Contribution Streak
-
-<div align="center">
-
-<img
-  src="./profile/streak.svg"
-  width="500"
-  alt="GitHub Contribution Streak"
-/>
-
-</div>
-
----
-
 ##  When I'm Not Coding
 
 When I'm not coding, I'm probably doing one of these:
